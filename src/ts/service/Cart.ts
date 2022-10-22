@@ -7,6 +7,23 @@ export default class Cart {
         this._items.push(item);
     }
 
+    delite(id: number): void {
+       const delElementIndex = this._items.findIndex((el) => el.id === id);
+       this._items.splice(delElementIndex, delElementIndex);
+    }
+
+    totalCost(): number {
+        let sum = 0;
+        this._items.forEach(element => {
+            sum += element.price
+        });
+        return sum;
+    }
+
+    discountTotalCost(discount: number): number {
+        return this.totalCost() - this.totalCost()* discount / 100;
+    }
+
     get items(): Buyable[] {
         return [...this._items]; 
     }

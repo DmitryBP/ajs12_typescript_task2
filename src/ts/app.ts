@@ -8,8 +8,10 @@ console.log(cart.items);
 
 cart.add(new Book(1001, 'War and Piece', 'Leo Tolstoy', 2000, 1225));
 cart.add(new MusicAlbum(1008, 'Meteora', 'Linkin Park', 900));
-cart.add(new Movie('http//...', 'Мстители', 'IMAX', 'The Avengers', 2012, 'СЩА', 'Avengers Assemble!', ['фантастика', 'боевик', 'фэнтези', 'приключения', '...'], '137 мин. / 02:17'));
+cart.add(new Movie(123, 'http//...', 'Мстители', 'IMAX', 'The Avengers', 2012, 'СЩА', 'Avengers Assemble!', ['фантастика', 'боевик', 'фэнтези', 'приключения', '...'], '137 мин. / 02:17', 100));
 
 
 console.log(cart.items);
+console.log(cart.totalCost())
+console.log(cart.discountTotalCost(10))
 

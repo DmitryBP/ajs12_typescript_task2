@@ -2,6 +2,7 @@ import Buyable from "./Buyable";
 
 export default class Movie implements Buyable {
   constructor(
+    readonly id: number,
     readonly img: string,
     readonly name: string,
     readonly quality: string,
@@ -11,5 +12,6 @@ export default class Movie implements Buyable {
     readonly slogan: string,
     readonly genres: [string, string, string, string, string],
     readonly time: string,
+    readonly price: number,
   ){}
 }
